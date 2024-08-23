@@ -5,7 +5,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: ${URL_EUREKA/eureka:http://localhost:8761/eureka/}
+      defaultZone: https://micro-eureka-v2.onrender.com/eureka
   instance:
     prefer-ip-address: true
 
