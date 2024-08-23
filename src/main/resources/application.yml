@@ -1,0 +1,30 @@
+# spring.application.name=micro-gateway
+server:
+  port: ${PORT:8080}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${URL_EUREKA/eureka:http://localhost:8761/eureka/}
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: micro-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
